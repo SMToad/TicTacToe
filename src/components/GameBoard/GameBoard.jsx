@@ -1,13 +1,18 @@
-import { useState } from "react";
-
 const initialBoard = [
     [null, null, null],
     [null, null, null],
     [null, null, null]
 ]
 
-export default function GameBoard({onSelectCell, activePlayerSymbol}){
-    const [gameBoard, setGameBoard] = useState(initialBoard);
+export default function GameBoard({onSelectCell, turns}){
+    let gameBoard = initialBoard;
+    for(const turn of turns){
+        const {cell, player} = turn;
+        const {row, col} = cell;
+
+        gameBoard[row][col] = player;
+    }
+   /*  const [gameBoard, setGameBoard] = useState(initialBoard);
 
     function handleSelectCell(rowIndex, colIndex){
         setGameBoard(prevGameBoard => {
@@ -16,7 +21,7 @@ export default function GameBoard({onSelectCell, activePlayerSymbol}){
             return updatedGameBoard;
         });
         onSelectCell();
-    }
+    } */
 
     return <ol id="game-board">
         {gameBoard.map((row, rowIndex) => (
@@ -24,7 +29,7 @@ export default function GameBoard({onSelectCell, activePlayerSymbol}){
                 <ol>
                     {row.map((playerCell, colIndex) => (
                         <li key={colIndex}>
-                            <button onClick={() => handleSelectCell(rowIndex, colIndex)}>{playerCell}</button>
+                            <button onClick={() => onSelectCell(rowIndex, colIndex)}>{playerCell}</button>
                         </li>
                     ))}
                 </ol>
