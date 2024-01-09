@@ -29,7 +29,12 @@ export default function GameBoard({onSelectCell, turns}){
                 <ol>
                     {row.map((playerCell, colIndex) => (
                         <li key={colIndex}>
-                            <button onClick={() => onSelectCell(rowIndex, colIndex)}>{playerCell}</button>
+                            <button 
+                                onClick={() => onSelectCell(rowIndex, colIndex)}
+                                disabled={playerCell!==null}
+                                >
+                                    {playerCell}
+                            </button>
                         </li>
                     ))}
                 </ol>
