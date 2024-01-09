@@ -8,9 +8,9 @@ export default function GameBoard({onSelectCell, turns}){
     let gameBoard = initialBoard;
     for(const turn of turns){
         const {cell, player} = turn;
-        const {row, col} = cell;
+        const {row, column} = cell;
 
-        gameBoard[row][col] = player;
+        gameBoard[row][column] = player;
     }
    /*  const [gameBoard, setGameBoard] = useState(initialBoard);
 

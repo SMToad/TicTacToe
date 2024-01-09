@@ -16,7 +16,7 @@ function App() {
 
       const updatedGameTurns = [
         {
-          cell : {row: rowIndex, col: colIndex},
+          cell : {row: rowIndex, column: colIndex},
           player: currentPlayer
         },
         ...currGameTurns
@@ -35,7 +35,7 @@ function App() {
         </ol>
         <GameBoard onSelectCell={handleSelectCell} turns={gameTurns}/>
       </div>
-      <Log/>
+      <Log turns={gameTurns}/>
     </main>
   )
 }
