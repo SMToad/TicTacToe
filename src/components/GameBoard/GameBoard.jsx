@@ -1,3 +1,5 @@
+import "./GameBoard.css";
+
 export default function GameBoard({onSelectCell, board}){
     return <ol id="game-board">
         {board.map((row, rowIndex) => (
