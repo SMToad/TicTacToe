@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/tictactoe/static/css/main.930d6bf8.css",
+    "main.js": "/tictactoe/static/js/main.cc3a32cc.js",
+    "static/media/bg-pattern-dark.png": "/tictactoe/static/media/bg-pattern-dark.f2c6e30a2a887881a35c.png",
+    "index.html": "/tictactoe/index.html",
+    "main.930d6bf8.css.map": "/tictactoe/static/css/main.930d6bf8.css.map",
+    "main.cc3a32cc.js.map": "/tictactoe/static/js/main.cc3a32cc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.930d6bf8.css",
+    "static/js/main.cc3a32cc.js"
+  ]
+}
